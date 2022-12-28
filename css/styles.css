@@ -540,6 +540,10 @@ section {
   /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
+/* input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+} */
+
 /* portfolio page */
 .our-future {
   padding-top: 96px;
