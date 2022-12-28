@@ -540,6 +540,20 @@ section {
   /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
+.subscribe-form-field {
+  color: #FFFFFF;
+  ;
+}
+
+.footer-subscrobe-button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  color: #FFFFFF;
+  background-color: var(--primaty-brand)
+  ;
+}
+
 /* input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 } */
