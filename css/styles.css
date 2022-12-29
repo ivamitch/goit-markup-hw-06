@@ -273,8 +273,6 @@ section {
 .hero-button:focus {
   background-color: #404bbf;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .future-list {
@@ -485,7 +483,7 @@ section {
 }
 
 .footer-social-label {
-  margin-bottom: 26px;
+  margin-bottom: 16px;
 }
 
 /* .footer-media h3 {
@@ -548,9 +546,11 @@ section {
   /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
-/* .subscribe-form-field {
-  position: relative;
-} */
+.subscribe-form-field {
+  /* position: relative; */
+  display: flex;
+  /* align-items: baseline; */
+}
 
 .subscribe-form {
   margin-left: 80px;
@@ -563,12 +563,24 @@ section {
 .subscribe-form-input {
   width: 264px;
   height: 40px;
-
+  margin-right: 24px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 
-  margin-right: 24px;
+  color: var(--light);
+
+  padding-left: 16px;
+}
+
+.subscribe-form-input:focus {
+  outline: 1px solid var(--primaty-brand);
+  outline-offset: -2px;
+}
+
+.subscribe-form-input::placeholder {
+  /* padding-left: 16px; */
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .subscribe-form-label {
@@ -578,20 +590,41 @@ section {
 }
 
 .footer-subscribe-button {
+  position: relative;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 24px;
-  padding-right: 0px;
+  padding-right: 64px;
 
   color: #FFFFFF;
   background-color: var(--primaty-brand);
   border: none;
+  border-radius: 4px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+
+  transition-duration: 250ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-subscribe-button:hover,
+.footer-subscribe-button:focus {
+  background-color: #404bbf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .footer-subscribe-button-icon {
   fill: #FFFFFF;
+  position: absolute;
 
   margin-left: 16px;
+  /* margin-top: 12px; */
 }
 
 /* input::placeholder {
@@ -608,8 +641,6 @@ section {
   justify-content: center;
 
   margin-bottom: 72px;
-
-  /* background-color: teal; */
 }
 
 .services .list:not(:last-child) {
@@ -645,8 +676,6 @@ section {
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-
-  /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .service-example {
@@ -678,12 +707,6 @@ section {
   top: 0;
   left: 0;
   transform: translateY(100%);
-
-  /* позиціювати можна також таким чином */
-
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 
   padding-top: 40px;
   padding-right: 32px;
@@ -733,8 +756,6 @@ section {
 .service-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-
-  /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .service-example li:nth-child(3n) {
@@ -830,6 +851,11 @@ footer {
   min-height: 576px;
 
   transition: opacity var(--anim-fast), transform var(--anim-fast);
+
+  padding-top: 72px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
 }
 
 .backdrop.is-hidden .modal {
@@ -854,4 +880,190 @@ footer {
   border-radius: 50%;
 
   cursor: pointer;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: #404BBF;
+  fill: #FFFFFF;
+}
+
+.registration-form-appeal {
+  display: block;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.registration-form-field {
+  display: block;
+  position: relative;
+
+  margin-bottom: 8px;
+}
+
+.registration-form-label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px; 
+  letter-spacing: 0.04em;
+
+  color: #8E8F99;
+  }
+
+  .registration-form-input {
+    width: 100%;
+    height: 40px;
+
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    outline: transparent;
+
+    padding-left: 38px;
+
+    transition: outline var(--anim-goit);
+  }
+
+  .registration-form-input:focus {
+    outline: 1px solid var(--primaty-brand);
+    outline-offset: -2px;
+  }
+
+  .registration-form-icon-person {
+    position: absolute;
+    bottom: 11px;
+    left: 16px;
+
+    margin-right: 7px;
+
+    transition: fill var(--anim-goit);
+  }
+  .registration-form-icon-phone {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+
+    margin-right: 7px;
+  }
+  .registration-form-icon-email {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+
+  .registration-form-input:focus + .registration-form-icon-person {
+    fill: var(--primaty-brand);
+  }
+  .registration-form-input:focus + .registration-form-icon-phone {
+    fill: var(--primaty-brand);
+  }
+  .registration-form-input:focus + .registration-form-icon-email {
+    fill: var(--primaty-brand);
+  }
+
+  .registration-form-message {
+    display: block;
+  }
+
+  .registration-form-textarea {
+    width: 100%;
+    height: 120px;
+
+    resize: none;
+    background-color: transparent;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    padding-left: 16px;
+    padding-top: 8px;
+  }
+
+  .registration-form-textarea::placeholder {
+    font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+
+  letter-spacing: 0.04em;
+
+  color: rgba(117, 117, 117, 0.5);
+  }
+
+  .registration-form-textarea:focus {
+    outline: 1px solid var(--primaty-brand);
+    outline-offset: -2px;
+  }
+
+  /* checkbox */
+.registration-form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  margin-top: 16px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+
+  color: #757575;
+}
+
+.registration-form-checkbox {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+
+    transition: var(--anim-goit);
+}
+
+.registration-form-checkbox:checked {
+    background-image: url(../images/icons/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: #404BBF;
+    border: transparent;
+}
+
+.registration-form-text {
+  user-select: none;
+}
+
+.modal-submit-btn {
+  background-color: var(--primaty-brand);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+  cursor: pointer;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #FFFFFF;
+
+  /* width: 169px; */
+  padding: 16px 32px;
+  margin-left: 120px;
 }
