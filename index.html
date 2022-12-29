@@ -417,26 +417,32 @@
           </ul>
         </div>
 
-        <form class="subscribe-form" name="subscribe-form">
+        <div class="footer-subscribe-form">
           <h3 class="subscribe-form-label">Subsirbe</h3>
-          <div class="subscribe-form-group">
-            <label class="subscribe-form-field" for="user-email">
 
-            <input class="subscribe-form-input" type="email" name="user-mail" id="user-mail" placeholder="E-mail">
+          <form class="subscribe-form" name="subscribe-form">
+            <div class="subscribe-form-group">
+              <label class="subscribe-form-field" for="user-mail">
+                <input
+                  class="subscribe-form-input"
+                  type="email"
+                  name="user-mail"
+                  id="user-mail"
+                  placeholder="E-mail"
+                />
+              </label>
+            </div>
 
-            <button class="footer-subscribe-button" type="submit">Subscribe
+            <button class="footer-subscribe-button" type="submit">
+              Subscribe
               <svg class="footer-subscribe-button-icon" width="24" height="24">
                 <use href="./images/symbol-defs.svg#icon-send"></use>
               </svg>
             </button>
-            
-          </label>
-          </div>
-        </form>
-
+          </form>
+        </div>
       </div>
     </footer>
-
 
     <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
@@ -446,52 +452,66 @@
             <use href="./images/symbol-defs.svg#icon-close-btn"></use>
           </svg>
         </button>
-        
+
+        <strong class="registration-form-appeal"
+          >Leave your contacts and we will call you back</strong
+        >
+
         <form class="registration-form" name="registration-form">
+          <div class="registration-form-group" role="group">
+            <label class="registration-form-field">
+              <span class="registration-form-label">Name</span>
+              <input
+                class="registration-form-input"
+                type="text"
+                name="user-name"
+              />
+              <svg class="registration-form-icon-person" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </label>
+            <label class="registration-form-field">
+              <span class="registration-form-label">Phone</span>
+              <input
+                class="registration-form-input"
+                type="tel"
+                name="user-phone"
+              />
+              <svg class="registration-form-icon-phone" width="18" height="24">
+                <use href="./images/symbol-defs.svg#icon-phone"></use>
+              </svg>
+            </label>
+            <label class="registration-form-field">
+              <span class="registration-form-label">Email</span>
+              <input
+                class="registration-form-input"
+                type="email"
+                name="user-mail"
+              />
+              <svg class="registration-form-icon-email" width="18" height="24">
+                <use href="./images/symbol-defs.svg#icon-email"></use>
+              </svg>
+            </label>
 
-        <strong class="registration-form-appeal">Leave your contacts and we will call you back</strong>
-        
-        <div class="registration-form-group" role="group" aria-labelledby="">
-          <label class="registration-form-field">
-
-            <span class="registration-form-label">Name</span>
-            <input class="registration-form-input" type="text" name="user-name">
-            <svg class="registration-form-icon-person" width="18" height="18">
-              <use href="./images/symbol-defs.svg#icon-person"></use>
-            </svg>
-
+            <label class="registration-form-message">
+              <span class="registration-form-label">Comment</span>
+              <textarea
+                class="registration-form-textarea"
+                name="user-message"
+                rows="7"
+                placeholder="Text input"
+              ></textarea>
+            </label>
+          </div>
+          <label class="registration-form-agreement">
+            <input class="registration-form-checkbox" type="checkbox"/>
+            <span class="registration-form-text"
+              >I accept the terms and conditions of the
+              <a class="registration-form-link" href="">Privacy Policy</a></span
+            >
           </label>
-          <label class="registration-form-field">
-
-            <span class="registration-form-label">Phone</span>
-            <input class="registration-form-input" type="phone" name="user-phone">
-            <svg class="registration-form-icon-phone" width="18" height="24">
-              <use href="./images/symbol-defs.svg#icon-phone"></use>
-            </svg>
-
-          </label>
-          <label class="registration-form-field">
-
-            <span class="registration-form-label">Email</span>
-            <input class="registration-form-input" type="email" name="user-mail">
-            <svg class="registration-form-icon-email" width="18" height="24">
-              <use href="./images/symbol-defs.svg#icon-email"></use>
-            </svg>
-
-          </label>
-
-          <label class="registration-form-message">
-            <span class="registration-form-label">Comment</span>
-            <textarea class="registration-form-textarea" name="user-message" rows="7" placeholder="Text input"></textarea>
-          </label>
-        </div>
-        <label class="registration-form-agreement">
-          <input class="registration-form-checkbox" type="checkbox" name="">
-          <span class="registration-form-text">I accept the terms and conditions of the <a class="registration-form-link" href="">Privacy Policy</a></span>
-        </label>
-        <button class="modal-submit-btn" type="submit">Send</button>
+          <button class="modal-submit-btn" type="submit">Send</button>
         </form>
-
       </div>
     </div>
     <script src="./js/modal.js"></script>
