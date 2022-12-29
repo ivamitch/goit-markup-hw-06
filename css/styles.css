@@ -1063,7 +1063,16 @@ footer {
 
   color: #FFFFFF;
 
-  /* width: 169px; */
-  padding: 16px 32px;
-  margin-left: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 169px;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 64px;
+}
+
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+  background-color: #404BBF;
 }
