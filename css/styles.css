@@ -1070,6 +1070,10 @@ footer {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 64px;
+
+  transition-duration: 250ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-submit-btn:hover,
